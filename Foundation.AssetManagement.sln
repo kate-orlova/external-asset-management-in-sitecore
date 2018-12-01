@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.AssetManagement", "src\Foundation\AssetManagement\code\Foundation.AssetManagement\Foundation.AssetManagement.csproj", "{428D3770-9BFA-45AE-9A83-6570BF6D5E70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{428D3770-9BFA-45AE-9A83-6570BF6D5E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428D3770-9BFA-45AE-9A83-6570BF6D5E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428D3770-9BFA-45AE-9A83-6570BF6D5E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428D3770-9BFA-45AE-9A83-6570BF6D5E70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5180B00-A8D1-4800-8D0D-C9D5C6FC77AD}
+	EndGlobalSection
+EndGlobal
