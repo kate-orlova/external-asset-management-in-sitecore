@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Sitecore.DependencyInjection;
+using System;
 
 namespace Foundation.AssetManagement.DependencyInjection
 {
-    public class RegisterServices
+    public class RegisterServices : IServicesConfigurator
     {
+        public void Configure(IServiceCollection serviceCollection)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
