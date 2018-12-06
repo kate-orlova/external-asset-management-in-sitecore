@@ -92,6 +92,7 @@
     <Compile Include="Interfaces\IExternalService.cs" />
     <Compile Include="Models\ExternalServiceSearchResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ExternalService.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
