@@ -95,6 +95,7 @@
     <Compile Include="DependencyInjection\RegisterServices.cs" />
     <Compile Include="Interfaces\IExternalService.cs" />
     <Compile Include="Models\ExternalServiceSearchResponse.cs" />
+    <Compile Include="Models\Hit.cs" />
     <Compile Include="Models\Hits.cs" />
     <Compile Include="Models\Shards.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
