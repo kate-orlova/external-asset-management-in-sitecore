@@ -100,6 +100,7 @@
     <Compile Include="Models\Metadata.cs" />
     <Compile Include="Models\Shards.cs" />
     <Compile Include="Models\Source.cs" />
+    <Compile Include="Models\Specifications.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ExternalService.cs" />
   </ItemGroup>
