@@ -97,6 +97,7 @@
     <Compile Include="Models\ExternalServiceSearchResponse.cs" />
     <Compile Include="Models\Hit.cs" />
     <Compile Include="Models\Hits.cs" />
+    <Compile Include="Models\Metadata.cs" />
     <Compile Include="Models\Shards.cs" />
     <Compile Include="Models\Source.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
