@@ -8,5 +8,6 @@ namespace Foundation.AssetManagement.Models
         [JsonProperty("country")] public string Country { get; set; }
         [JsonProperty("id")] public long Id { get; set; }
         [JsonProperty("name")] public string Name { get; set; }
+        [JsonProperty("metadata")] public Metadata Metadata { get; set; }
     }
 }
