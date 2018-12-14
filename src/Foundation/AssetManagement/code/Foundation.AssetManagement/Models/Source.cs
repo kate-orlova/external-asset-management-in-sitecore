@@ -10,5 +10,6 @@ namespace Foundation.AssetManagement.Models
         [JsonProperty("name")] public string Name { get; set; }
         [JsonProperty("metadata")] public Metadata Metadata { get; set; }
         [JsonProperty("public_url")] public string PublicUrl { get; set; }
+        [JsonProperty("status")] public string Status { get; set; }
     }
 }
