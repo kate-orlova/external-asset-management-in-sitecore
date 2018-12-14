@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace Foundation.AssetManagement.Models
 {
@@ -13,5 +14,6 @@ namespace Foundation.AssetManagement.Models
         [JsonProperty("status")] public string Status { get; set; }
         [JsonProperty("thumbnail")] public Thumbnail Thumbnail { get; set; }
         [JsonProperty("type")] public string Type { get; set; }
+        [JsonProperty("updated")] public DateTime Updated { get; set; }
     }
 }
