@@ -10,6 +10,7 @@ namespace Foundation.AssetManagement.DependencyInjection
         public void Configure(IServiceCollection serviceCollection)
         {
             serviceCollection.AddScoped<IExternalService, ExternalService>();
+            serviceCollection.AddScoped<IExternalImageProcessor, ExternalImageProcessor>();
         }
     }
 }
