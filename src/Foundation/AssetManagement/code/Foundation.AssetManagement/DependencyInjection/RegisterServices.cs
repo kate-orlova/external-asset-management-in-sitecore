@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Foundation.AssetManagement.Interfaces;
+using Foundation.AssetManagement.Services;
+using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
-using System;
 
 namespace Foundation.AssetManagement.DependencyInjection
 {
@@ -8,7 +9,7 @@ namespace Foundation.AssetManagement.DependencyInjection
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            throw new NotImplementedException();
+            serviceCollection.AddScoped<IExternalService, ExternalService>();
         }
     }
 }
