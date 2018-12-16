@@ -7,6 +7,10 @@ namespace Foundation.AssetManagement.Services
     {
         public string Resize(string url, int width, string additionalParameters)
         {
+            if (url.IsNullOrEmpty())
+            {
+                return null;
+            }
             return null;
         }
 
