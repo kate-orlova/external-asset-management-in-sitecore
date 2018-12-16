@@ -11,7 +11,13 @@ namespace Foundation.AssetManagement.Services
             {
                 return null;
             }
+
             var separator = url.Contains("?") ? "&" : "?";
+            if (additionalParameters.IsNullOrEmpty())
+            {
+                return $"{url}{separator}{additionalParameters}";
+            }
+
             return $"{url}{separator}w={width}";
         }
 
@@ -21,6 +27,7 @@ namespace Foundation.AssetManagement.Services
             {
                 return null;
             }
+
             var separator = url.Contains("?") ? "&" : "?";
             return $"{url}{separator}w={width}&h={height}&fit=crop&crop=edges";
         }
