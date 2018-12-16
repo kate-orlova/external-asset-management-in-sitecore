@@ -11,7 +11,8 @@ namespace Foundation.AssetManagement.Services
             {
                 return null;
             }
-            return null;
+            var separator = url.Contains("?") ? "&" : "?";
+            return $"{url}{separator}w={width}";
         }
 
         public string Crop(string url, int width, int height)
