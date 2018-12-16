@@ -1,4 +1,5 @@
 ﻿using Foundation.AssetManagement.Interfaces;
+using Sitecore.StringExtensions;
 
 namespace Foundation.AssetManagement.Services
 {
@@ -11,6 +12,10 @@ namespace Foundation.AssetManagement.Services
 
         public string Crop(string url, int width, int height)
         {
+            if (url.IsNullOrEmpty())
+            {
+                return null;
+            }
             var separator = url.Contains("?") ? "&" : "?";
             return $"{url}{separator}w={width}&h={height}&fit=crop&crop=edges";
         }
