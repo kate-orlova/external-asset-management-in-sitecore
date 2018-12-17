@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInjection\RegisterServices.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Interfaces\IExternalImageProcessor.cs" />
     <Compile Include="Interfaces\IExternalService.cs" />
     <Compile Include="Models\ExternalServiceSearchResponse.cs" />
