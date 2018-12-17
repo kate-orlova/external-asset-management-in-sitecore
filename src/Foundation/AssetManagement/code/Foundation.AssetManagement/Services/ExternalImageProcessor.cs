@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using Foundation.AssetManagement.Extensions;
 using Foundation.AssetManagement.Interfaces;
 using Sitecore.StringExtensions;
 
@@ -23,6 +24,12 @@ namespace Foundation.AssetManagement.Services
 
                 var sizeIsPredefined = false;
                 int sourceWidth = 0, sourceHeight = 0;
+
+                var widthMatch = WidthRegex.Match(additionalParameters);
+                if (widthMatch.Success)
+                {
+                    sourceWidth = widthMatch.Groups["width"].Value.ToInt();
+                }
 
                 return $"{url}{separator}{additionalParameters}";
             }
