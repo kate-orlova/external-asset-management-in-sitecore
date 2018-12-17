@@ -15,6 +15,11 @@ namespace Foundation.AssetManagement.Services
             var separator = url.Contains("?") ? "&" : "?";
             if (additionalParameters.IsNullOrEmpty())
             {
+                additionalParameters = additionalParameters.Trim('&', '?');
+
+                var sizeIsPredefined = false;
+                int sourceWidth = 0, sourceHeight = 0;
+
                 return $"{url}{separator}{additionalParameters}";
             }
 
