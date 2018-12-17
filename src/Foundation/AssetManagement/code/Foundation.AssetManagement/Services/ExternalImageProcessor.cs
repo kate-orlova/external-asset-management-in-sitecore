@@ -1,10 +1,14 @@
-﻿using Foundation.AssetManagement.Interfaces;
+﻿using System.Text.RegularExpressions;
+using Foundation.AssetManagement.Interfaces;
 using Sitecore.StringExtensions;
 
 namespace Foundation.AssetManagement.Services
 {
     public class ExternalImageProcessor : IExternalImageProcessor
     {
+        private static Regex WidthRegex = new Regex(@"w=(?<width>\d+)", RegexOptions.Compiled);
+        private static Regex HeightRegex = new Regex(@"h=(?<height>\d+)", RegexOptions.Compiled);
+
         public string Resize(string url, int width, string additionalParameters)
         {
             if (url.IsNullOrEmpty())
