@@ -36,6 +36,15 @@ namespace Foundation.AssetManagement.Services
                 {
                     sourceHeight = heightMatch.Groups["height"].Value.ToInt();
                 }
+
+                if (sourceWidth > 0 & sourceHeight > 0)
+                {
+                    sizeIsPredefined = true;
+                    var newHeight = width * sourceHeight / sourceWidth;
+                    additionalParameters = additionalParameters.Replace(widthMatch.Groups["width"].Value, width.ToString());
+                    additionalParameters = additionalParameters.Replace(heightMatch.Groups["height"].Value, newHeight.ToString());
+                }
+
                 return $"{url}{separator}{additionalParameters}";
             }
 
