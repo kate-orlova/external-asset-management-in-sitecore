@@ -31,6 +31,7 @@ namespace Foundation.AssetManagement.Services
                     sourceWidth = widthMatch.Groups["width"].Value.ToInt();
                 }
 
+                var heightMatch = HeightRegex.Match(additionalParameters);
                 return $"{url}{separator}{additionalParameters}";
             }
 
