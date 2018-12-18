@@ -32,6 +32,10 @@ namespace Foundation.AssetManagement.Services
                 }
 
                 var heightMatch = HeightRegex.Match(additionalParameters);
+                if (heightMatch.Success)
+                {
+                    sourceHeight = heightMatch.Groups["height"].Value.ToInt();
+                }
                 return $"{url}{separator}{additionalParameters}";
             }
 
