@@ -41,8 +41,15 @@ namespace Foundation.AssetManagement.Services
                 {
                     sizeIsPredefined = true;
                     var newHeight = width * sourceHeight / sourceWidth;
-                    additionalParameters = additionalParameters.Replace(widthMatch.Groups["width"].Value, width.ToString());
-                    additionalParameters = additionalParameters.Replace(heightMatch.Groups["height"].Value, newHeight.ToString());
+                    additionalParameters =
+                        additionalParameters.Replace(widthMatch.Groups["width"].Value, width.ToString());
+                    additionalParameters =
+                        additionalParameters.Replace(heightMatch.Groups["height"].Value, newHeight.ToString());
+                }
+
+                if (!sizeIsPredefined)
+                {
+                    additionalParameters = $"w={width}&{additionalParameters}";
                 }
 
                 return $"{url}{separator}{additionalParameters}";
