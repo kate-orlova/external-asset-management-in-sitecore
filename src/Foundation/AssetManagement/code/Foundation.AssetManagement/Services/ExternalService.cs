@@ -16,11 +16,22 @@ namespace Foundation.AssetManagement.Services
         {
             var requestObject = new
             {
-                query = new {
-                    query = query
-
+                query = new
+                {
+                    multi_match = new
+                    {
+                        query = query,
+                        fields = new[]
+                        {
+                            "combined_fields"
+                        },
+                        @operator = "and",
+                        type = "best_fields",
+                        fuzziness = "auto",
+                        minimum_should_match = 0
+                    }
                 },
-                    from = startFrom,
+                from = startFrom,
                     size = pageSize
          
             };
