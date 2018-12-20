@@ -32,8 +32,16 @@ namespace Foundation.AssetManagement.Services
                     }
                 },
                 from = startFrom,
-                    size = pageSize
-         
+                size = pageSize,
+                sort = new object[]
+                {
+                    "_score",
+                    new
+                    {
+                        updated = "desc"
+                    },
+                    "_id"
+                }
             };
             var requestString = JsonConvert.SerializeObject(requestObject);
             return requestString;
