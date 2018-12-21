@@ -15,5 +15,9 @@
 
             return settingValue;
         }
+        static int GetSetting(string settingName, int defaultValue)
+        {
+            return Sitecore.Configuration.Settings.GetIntSetting(settingName, defaultValue);
+        }
     }
 }
