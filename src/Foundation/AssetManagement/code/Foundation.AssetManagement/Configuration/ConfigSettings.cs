@@ -19,5 +19,9 @@
         {
             return Sitecore.Configuration.Settings.GetIntSetting(settingName, defaultValue);
         }
+        static double GetSetting(string settingName, double defaultValue)
+        {
+            return Sitecore.Configuration.Settings.GetDoubleSetting(settingName, defaultValue);
+        }
     }
 }
