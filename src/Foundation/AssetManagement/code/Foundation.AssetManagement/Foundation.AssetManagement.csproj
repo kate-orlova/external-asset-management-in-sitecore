@@ -92,6 +92,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\Constants.cs" />
     <Compile Include="DependencyInjection\RegisterServices.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Interfaces\IExternalImageProcessor.cs" />
