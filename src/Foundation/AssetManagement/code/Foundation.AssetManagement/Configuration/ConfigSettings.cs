@@ -23,5 +23,9 @@
         {
             return Sitecore.Configuration.Settings.GetDoubleSetting(settingName, defaultValue);
         }
+        static bool GetSetting(string settingName, bool defaultValue)
+        {
+            return Sitecore.Configuration.Settings.GetBoolSetting(settingName, defaultValue);
+        }
     }
 }
