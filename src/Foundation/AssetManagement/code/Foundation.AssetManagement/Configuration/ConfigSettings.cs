@@ -7,6 +7,11 @@
         {
             var settingValue = Sitecore.Configuration.Settings.GetSetting(settingName);
 
+            if (string.IsNullOrEmpty(settingValue))
+            {
+                settingValue = defaultValue;
+            }
+
             return settingValue;
         }
     }
