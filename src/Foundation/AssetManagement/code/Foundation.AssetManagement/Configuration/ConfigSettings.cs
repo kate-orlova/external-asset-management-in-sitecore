@@ -2,6 +2,7 @@
 {
     public static class ConfigSettings
     {
+        public static string Host => GetSetting(Constants.AppSettings.Host);
 
         static string GetSetting(string settingName, string defaultValue = null)
         {
