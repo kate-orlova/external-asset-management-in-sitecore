@@ -5,6 +5,7 @@
         public static string Host => GetSetting(Constants.AppSettings.Host);
         public static string SearchjUrl => GetSetting(Constants.AppSettings.SearchUrl);
         public static string AccessKey => GetSetting(Constants.AppSettings.AccessKey);
+        public static string SecretKey => GetSetting(Constants.AppSettings.SecretKey);
 
         static string GetSetting(string settingName, string defaultValue = null)
         {
