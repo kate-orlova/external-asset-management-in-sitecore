@@ -3,7 +3,7 @@
     public static class ConfigSettings
     {
         public static string Host => GetSetting(Constants.AppSettings.Host);
-        public static string SearchjUrl => GetSetting(Constants.AppSettings.SearchUrl);
+        public static string SearchUrl => GetSetting(Constants.AppSettings.SearchUrl);
         public static string AccessKey => GetSetting(Constants.AppSettings.AccessKey);
         public static string SecretKey => GetSetting(Constants.AppSettings.SecretKey);
 
