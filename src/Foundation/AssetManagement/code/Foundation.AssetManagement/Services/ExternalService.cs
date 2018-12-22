@@ -4,6 +4,7 @@ using Foundation.AssetManagement.Models;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
+using System.Text;
 
 namespace Foundation.AssetManagement.Services
 {
@@ -64,5 +65,11 @@ namespace Foundation.AssetManagement.Services
         {
             return null;
         }
+
+        private static byte[] ToBytes(string str)
+        {
+            return Encoding.UTF8.GetBytes(str.ToCharArray());
+        }
+        
     }
 }
