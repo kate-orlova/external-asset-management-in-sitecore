@@ -80,6 +80,10 @@ namespace Foundation.AssetManagement.Services
         {
             return SHA256.Create().ComputeHash(bytes);
         }
+        private static byte[] HmacSha256(string data, byte[] key)
+        {
+            return new HMACSHA256(key).ComputeHash(ToBytes(data));
+        }
 
     }
 }
