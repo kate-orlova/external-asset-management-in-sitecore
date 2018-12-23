@@ -5,6 +5,7 @@ using Foundation.AssetManagement.Models;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Foundation.AssetManagement.Services
@@ -74,6 +75,10 @@ namespace Foundation.AssetManagement.Services
         private static string HexEncode(byte[] bytes)
         {
             return BitConverter.ToString(bytes).Replace("-", string.Empty).ToLowerInvariant();
+        }
+        private static byte[] Hash(byte[] bytes)
+        {
+            return SHA256.Create().ComputeHash(bytes);
         }
 
     }
