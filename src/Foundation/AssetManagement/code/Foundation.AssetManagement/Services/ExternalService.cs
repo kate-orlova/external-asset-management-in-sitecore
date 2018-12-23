@@ -68,6 +68,12 @@ namespace Foundation.AssetManagement.Services
             return null;
         }
 
+        private string Sign(string hashedRequestPayload, string requestMethod, string canonicalUri,
+            string canonicalQueryString)
+        {
+            return null;
+        }
+
         private static byte[] ToBytes(string str)
         {
             return Encoding.UTF8.GetBytes(str.ToCharArray());
