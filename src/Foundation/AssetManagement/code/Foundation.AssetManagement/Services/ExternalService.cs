@@ -71,6 +71,7 @@ namespace Foundation.AssetManagement.Services
         private string Sign(string hashedRequestPayload, string requestMethod, string canonicalUri,
             string canonicalQueryString)
         {
+            var currentDateTime = DateTime.UtcNow;
             return null;
         }
 
