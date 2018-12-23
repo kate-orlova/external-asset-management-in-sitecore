@@ -72,6 +72,7 @@ namespace Foundation.AssetManagement.Services
             string canonicalQueryString)
         {
             var currentDateTime = DateTime.UtcNow;
+            var accessKey = ConfigSettings.AccessKey;
             return null;
         }
 
