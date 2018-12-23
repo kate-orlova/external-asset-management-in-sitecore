@@ -1,4 +1,5 @@
-﻿using Foundation.AssetManagement.Configuration;
+﻿using System;
+using Foundation.AssetManagement.Configuration;
 using Foundation.AssetManagement.Interfaces;
 using Foundation.AssetManagement.Models;
 using Newtonsoft.Json;
@@ -70,6 +71,10 @@ namespace Foundation.AssetManagement.Services
         {
             return Encoding.UTF8.GetBytes(str.ToCharArray());
         }
-        
+        private static string HexEncode(byte[] bytes)
+        {
+            return BitConverter.ToString(bytes).Replace("-", string.Empty).ToLowerInvariant();
+        }
+
     }
 }
