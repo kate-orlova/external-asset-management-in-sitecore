@@ -4,6 +4,7 @@
     {
         public static string Host => GetSetting(Constants.AppSettings.Host);
         public static string SearchUrl => GetSetting(Constants.AppSettings.SearchUrl);
+        public static string ContentType => GetSetting(Constants.AppSettings.ContentType);
         public static string AccessKey => GetSetting(Constants.AppSettings.AccessKey);
         public static string SecretKey => GetSetting(Constants.AppSettings.SecretKey);
 
