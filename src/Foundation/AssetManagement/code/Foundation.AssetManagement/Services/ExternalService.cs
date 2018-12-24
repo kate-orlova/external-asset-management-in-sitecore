@@ -74,6 +74,7 @@ namespace Foundation.AssetManagement.Services
             var currentDateTime = DateTime.UtcNow;
             var accessKey = ConfigSettings.AccessKey;
             var secretKey = ConfigSettings.SecretKey;
+            var dateStamp = currentDateTime.ToString("yyyyMMdd");
             return null;
         }
 
