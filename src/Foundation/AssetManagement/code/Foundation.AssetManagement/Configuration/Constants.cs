@@ -11,6 +11,7 @@ namespace Foundation.AssetManagement.Configuration
         {
             public const string Host = "AssetManagement.Host";
             public const string SearchUrl = "AssetManagement.SearchUrl";
+            public const string ContentType = "AssetsManagement.ContentType";
             public const string AccessKey = "AssetManagement.AccessKey";
             public const string SecretKey = "AssetManagement.SecretKey";
         }
