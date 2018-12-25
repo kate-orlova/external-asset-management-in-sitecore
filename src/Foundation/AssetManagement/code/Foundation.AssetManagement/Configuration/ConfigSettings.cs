@@ -7,6 +7,7 @@
         public static string ContentType => GetSetting(Constants.AppSettings.ContentType);
         public static string AccessKey => GetSetting(Constants.AppSettings.AccessKey);
         public static string SecretKey => GetSetting(Constants.AppSettings.SecretKey);
+        public static string RegionName => GetSetting(Constants.AppSettings.RegionName);
 
         static string GetSetting(string settingName, string defaultValue = null)
         {
