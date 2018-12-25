@@ -14,6 +14,7 @@ namespace Foundation.AssetManagement.Configuration
             public const string ContentType = "AssetsManagement.ContentType";
             public const string AccessKey = "AssetManagement.AccessKey";
             public const string SecretKey = "AssetManagement.SecretKey";
+            public const string RegionName = "AssetsManagement.RegionName";
         }
     }
 }
