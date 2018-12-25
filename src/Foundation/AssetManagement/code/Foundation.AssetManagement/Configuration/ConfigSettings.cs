@@ -8,6 +8,7 @@
         public static string AccessKey => GetSetting(Constants.AppSettings.AccessKey);
         public static string SecretKey => GetSetting(Constants.AppSettings.SecretKey);
         public static string RegionName => GetSetting(Constants.AppSettings.RegionName);
+        public static string ServiceName => GetSetting(Constants.AppSettings.ServiceName);
 
         static string GetSetting(string settingName, string defaultValue = null)
         {
