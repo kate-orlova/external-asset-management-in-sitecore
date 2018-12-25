@@ -76,6 +76,7 @@ namespace Foundation.AssetManagement.Services
             var secretKey = ConfigSettings.SecretKey;
             var dateStamp = currentDateTime.ToString("yyyyMMdd");
             var requestDate = currentDateTime.ToString("yyyyMMddTHHmmss") + "Z";
+            var credentialScope = $"{dateStamp}/{ConfigSettings.RegionName}/{ConfigSettings.ServiceName}";
             return null;
         }
 
