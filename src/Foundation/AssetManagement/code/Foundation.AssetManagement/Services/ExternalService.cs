@@ -5,6 +5,7 @@ using Foundation.AssetManagement.Interfaces;
 using Foundation.AssetManagement.Models;
 using Newtonsoft.Json;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
@@ -83,6 +84,7 @@ namespace Foundation.AssetManagement.Services
                 { "host", ConfigSettings.Host  },
                 { "x-amz-date", requestDate }
             };
+            string canonicalHeaders = string.Join("\n", headers.Select(x => x.Key.ToLowerInvariant() + ":" + x.Value.Trim())) + "\n";
             return null;
         }
 
