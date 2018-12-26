@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Foundation.AssetManagement.Configuration;
 using Foundation.AssetManagement.Interfaces;
 using Foundation.AssetManagement.Models;
@@ -77,6 +78,11 @@ namespace Foundation.AssetManagement.Services
             var dateStamp = currentDateTime.ToString("yyyyMMdd");
             var requestDate = currentDateTime.ToString("yyyyMMddTHHmmss") + "Z";
             var credentialScope = $"{dateStamp}/{ConfigSettings.RegionName}/{ConfigSettings.ServiceName}";
+            var headers = new SortedDictionary<string, string> {
+                { "content-type", ConfigSettings.ContentType },
+                { "host", ConfigSettings.Host  },
+                { "x-amz-date", requestDate }
+            };
             return null;
         }
 
