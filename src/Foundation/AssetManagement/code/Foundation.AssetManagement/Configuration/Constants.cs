@@ -17,6 +17,7 @@ namespace Foundation.AssetManagement.Configuration
             public const string RegionName = "AssetsManagement.RegionName";
             public const string ServiceName = "AssetsManagement.ServiceName";
             public const string SignedHeaders = "AssetsManagement.SignedHeaders";
+            public const string Algorithm = "AssetsManagement.Algorithm";
         }
     }
 }
