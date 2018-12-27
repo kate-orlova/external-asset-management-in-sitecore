@@ -93,6 +93,7 @@ namespace Foundation.AssetManagement.Services
                                                     + canonicalHeaders + "\n"
                                                     + ConfigSettings.SignedHeaders + "\n"
                                                     + hashedRequestPayload;
+            string hashedCanonicalRequest = HexEncode(Hash(ToBytes(canonicalRequest)));
             return null;
         }
 
