@@ -85,6 +85,14 @@ namespace Foundation.AssetManagement.Services
                 { "x-amz-date", requestDate }
             };
             string canonicalHeaders = string.Join("\n", headers.Select(x => x.Key.ToLowerInvariant() + ":" + x.Value.Trim())) + "\n";
+
+            // Task 1: Create a Canonical Request For Signature v. 4
+            string canonicalRequest = requestMethod + "\n"
+                                                    + canonicalUri + "\n"
+                                                    + canonicalQueryString + "\n"
+                                                    + canonicalHeaders + "\n"
+                                                    + ConfigSettings.SignedHeaders + "\n"
+                                                    + hashedRequestPayload;
             return null;
         }
 
