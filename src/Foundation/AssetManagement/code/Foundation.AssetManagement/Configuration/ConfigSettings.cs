@@ -10,6 +10,7 @@
         public static string RegionName => GetSetting(Constants.AppSettings.RegionName);
         public static string ServiceName => GetSetting(Constants.AppSettings.ServiceName);
         public static string SignedHeaders => GetSetting(Constants.AppSettings.SignedHeaders);
+        public static string Algorithm => GetSetting(Constants.AppSettings.Algorithm);
 
         static string GetSetting(string settingName, string defaultValue = null)
         {
