@@ -98,6 +98,9 @@ namespace Foundation.AssetManagement.Services
             // Task 2: Create a String to Sign for Signature v. 4
             string stringToSign = ConfigSettings.Algorithm + "\n" + requestDate + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
 
+            // Task 3: Calculate the AWS Signature v. 4
+            byte[] signingKey = GetSignatureKey(secretKey, dateStamp, ConfigSettings.RegionName, ConfigSettings.ServiceName);
+
             return null;
         }
 
