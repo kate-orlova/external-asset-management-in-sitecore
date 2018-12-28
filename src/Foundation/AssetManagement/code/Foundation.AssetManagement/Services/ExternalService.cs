@@ -79,12 +79,14 @@ namespace Foundation.AssetManagement.Services
             var dateStamp = currentDateTime.ToString("yyyyMMdd");
             var requestDate = currentDateTime.ToString("yyyyMMddTHHmmss") + "Z";
             var credentialScope = $"{dateStamp}/{ConfigSettings.RegionName}/{ConfigSettings.ServiceName}/aws4_request";
-            var headers = new SortedDictionary<string, string> {
-                { "content-type", ConfigSettings.ContentType },
-                { "host", ConfigSettings.Host  },
-                { "x-amz-date", requestDate }
+            var headers = new SortedDictionary<string, string>
+            {
+                {"content-type", ConfigSettings.ContentType},
+                {"host", ConfigSettings.Host},
+                {"x-amz-date", requestDate}
             };
-            string canonicalHeaders = string.Join("\n", headers.Select(x => x.Key.ToLowerInvariant() + ":" + x.Value.Trim())) + "\n";
+            string canonicalHeaders =
+                string.Join("\n", headers.Select(x => x.Key.ToLowerInvariant() + ":" + x.Value.Trim())) + "\n";
 
             // Task 1: Create a Canonical Request For Signature v. 4
             string canonicalRequest = requestMethod + "\n"
@@ -94,14 +96,29 @@ namespace Foundation.AssetManagement.Services
                                                     + ConfigSettings.SignedHeaders + "\n"
                                                     + hashedRequestPayload;
             string hashedCanonicalRequest = HexEncode(Hash(ToBytes(canonicalRequest)));
-            
+
             // Task 2: Create a String to Sign for Signature v. 4
-            string stringToSign = ConfigSettings.Algorithm + "\n" + requestDate + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
+            string stringToSign = ConfigSettings.Algorithm + "\n" + requestDate + "\n" + credentialScope + "\n" +
+                                  hashedCanonicalRequest;
 
             // Task 3: Calculate the AWS Signature v. 4
-            byte[] signingKey = GetSignatureKey(secretKey, dateStamp, ConfigSettings.RegionName, ConfigSettings.ServiceName);
+            byte[] signingKey =
+                GetSignatureKey(secretKey, dateStamp, ConfigSettings.RegionName, ConfigSettings.ServiceName);
             string signature = HexEncode(HmacSha256(stringToSign, signingKey));
-            return null;
+
+            // Task 4: Prepare a signed request v.4
+            // Authorization: algorithm Credential=access key ID/credential scope, SignedHeadaers=SignedHeaders, Signature=signature
+            string authorization = string.Format(
+                "{0} Credential={1}/{2}/{3}/{4}/aws4_request, SignedHeaders={5}, Signature={6}",
+                ConfigSettings.Algorithm,
+                accessKey,
+                dateStamp,
+                ConfigSettings.RegionName,
+                ConfigSettings.ServiceName,
+                ConfigSettings.SignedHeaders,
+                signature);
+
+            return authorization;
         }
 
         private static byte[] GetSignatureKey(string key, string dateStamp, string regionName, string serviceName)
@@ -111,22 +128,25 @@ namespace Foundation.AssetManagement.Services
             byte[] kService = HmacSha256(serviceName, kRegion);
             return HmacSha256("aws4_request", kService);
         }
+
         private static byte[] ToBytes(string str)
         {
             return Encoding.UTF8.GetBytes(str.ToCharArray());
         }
+
         private static string HexEncode(byte[] bytes)
         {
             return BitConverter.ToString(bytes).Replace("-", string.Empty).ToLowerInvariant();
         }
+
         private static byte[] Hash(byte[] bytes)
         {
             return SHA256.Create().ComputeHash(bytes);
         }
+
         private static byte[] HmacSha256(string data, byte[] key)
         {
             return new HMACSHA256(key).ComputeHash(ToBytes(data));
         }
-
     }
 }
