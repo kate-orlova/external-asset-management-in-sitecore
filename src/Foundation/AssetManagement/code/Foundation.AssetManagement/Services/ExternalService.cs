@@ -78,7 +78,7 @@ namespace Foundation.AssetManagement.Services
             var secretKey = ConfigSettings.SecretKey;
             var dateStamp = currentDateTime.ToString("yyyyMMdd");
             var requestDate = currentDateTime.ToString("yyyyMMddTHHmmss") + "Z";
-            var credentialScope = $"{dateStamp}/{ConfigSettings.RegionName}/{ConfigSettings.ServiceName}";
+            var credentialScope = $"{dateStamp}/{ConfigSettings.RegionName}/{ConfigSettings.ServiceName}/aws4_request";
             var headers = new SortedDictionary<string, string> {
                 { "content-type", ConfigSettings.ContentType },
                 { "host", ConfigSettings.Host  },
@@ -101,6 +101,13 @@ namespace Foundation.AssetManagement.Services
             return null;
         }
 
+        private static byte[] GetSignatureKey(string key, string dateStamp, string regionName, string serviceName)
+        {
+            byte[] kDate = HmacSha256(dateStamp, ToBytes("AWS4" + key));
+            byte[] kRegion = HmacSha256(regionName, kDate);
+            byte[] kService = HmacSha256(serviceName, kRegion);
+            return HmacSha256("aws4_request", kService);
+        }
         private static byte[] ToBytes(string str)
         {
             return Encoding.UTF8.GetBytes(str.ToCharArray());
