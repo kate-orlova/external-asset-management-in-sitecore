@@ -70,6 +70,13 @@ namespace Foundation.AssetManagement.Services
             return null;
         }
 
+        private string CreateRequestPayload(string jsonString)
+        {
+            string hashedRequestPayload = HexEncode(Hash(ToBytes(jsonString)));
+
+            return hashedRequestPayload;
+        }
+
         private string Sign(string hashedRequestPayload, string requestMethod, string canonicalUri,
             string canonicalQueryString)
         {
