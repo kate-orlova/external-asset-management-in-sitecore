@@ -94,6 +94,10 @@ namespace Foundation.AssetManagement.Services
                                                     + ConfigSettings.SignedHeaders + "\n"
                                                     + hashedRequestPayload;
             string hashedCanonicalRequest = HexEncode(Hash(ToBytes(canonicalRequest)));
+            
+            // Task 2: Create a String to Sign for Signature v. 4
+            string stringToSign = ConfigSettings.Algorithm + "\n" + requestDate + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
+
             return null;
         }
 
