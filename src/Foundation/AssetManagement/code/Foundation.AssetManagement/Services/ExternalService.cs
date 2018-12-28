@@ -100,7 +100,7 @@ namespace Foundation.AssetManagement.Services
 
             // Task 3: Calculate the AWS Signature v. 4
             byte[] signingKey = GetSignatureKey(secretKey, dateStamp, ConfigSettings.RegionName, ConfigSettings.ServiceName);
-
+            string signature = HexEncode(HmacSha256(stringToSign, signingKey));
             return null;
         }
 
