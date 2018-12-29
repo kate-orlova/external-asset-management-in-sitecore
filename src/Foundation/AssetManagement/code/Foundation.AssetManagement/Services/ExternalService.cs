@@ -67,8 +67,8 @@ namespace Foundation.AssetManagement.Services
 
         private WebRequest RequestPost(string uri, string queriString, string jsonString)
         {
-
             string hashedRequestPayload = CreateRequestPayload(jsonString);
+            string authorization = Sign(hashedRequestPayload, "POST", uri, queriString);
             return null;
         }
 
