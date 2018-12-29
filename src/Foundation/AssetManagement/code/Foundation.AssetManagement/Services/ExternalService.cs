@@ -70,6 +70,7 @@ namespace Foundation.AssetManagement.Services
             string hashedRequestPayload = CreateRequestPayload(jsonString);
             string authorization = Sign(hashedRequestPayload, "POST", uri, queriString);
             string requestDate = DateTime.UtcNow.ToString("yyyyMMddTHHmmss") + "Z";
+            var requestUriString = $"https://{ConfigSettings.Host}{uri}";
             return null;
         }
 
