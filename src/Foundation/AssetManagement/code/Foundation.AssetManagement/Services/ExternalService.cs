@@ -76,6 +76,7 @@ namespace Foundation.AssetManagement.Services
 
             webRequest.Timeout = 20000;
             webRequest.Method = "POST";
+            webRequest.ContentType = ConfigSettings.ContentType;
 
             return null;
         }
