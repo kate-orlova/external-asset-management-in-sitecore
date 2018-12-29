@@ -78,6 +78,7 @@ namespace Foundation.AssetManagement.Services
             webRequest.Method = "POST";
             webRequest.ContentType = ConfigSettings.ContentType;
             webRequest.Headers.Add("Authorization", authorization);
+            webRequest.Headers.Add("X-Amz-date", requestDate);
 
             return null;
         }
