@@ -71,6 +71,12 @@ namespace Foundation.AssetManagement.Services
             string authorization = Sign(hashedRequestPayload, "POST", uri, queriString);
             string requestDate = DateTime.UtcNow.ToString("yyyyMMddTHHmmss") + "Z";
             var requestUriString = $"https://{ConfigSettings.Host}{uri}";
+
+            WebRequest webRequest = WebRequest.Create(requestUriString);
+
+            webRequest.Timeout = 20000;
+            webRequest.Method = "POST";
+
             return null;
         }
 
