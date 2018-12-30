@@ -86,6 +86,7 @@ namespace Foundation.AssetManagement.Services
             byte[] data = encoding.GetBytes(jsonString);
 
             Stream stream = webRequest.GetRequestStream();
+            stream.Write(data, 0, data.Length);
 
             return null;
         }
