@@ -88,7 +88,7 @@ namespace Foundation.AssetManagement.Services
             Stream stream = webRequest.GetRequestStream();
             stream.Write(data, 0, data.Length);
 
-            return null;
+            return webRequest;
         }
 
         private string CreateRequestPayload(string jsonString)
