@@ -80,6 +80,7 @@ namespace Foundation.AssetManagement.Services
             webRequest.Headers.Add("Authorization", authorization);
             webRequest.Headers.Add("X-Amz-date", requestDate);
             webRequest.Headers.Add("x-amz-content-sha256", hashedRequestPayload);
+            webRequest.ContentLength = jsonString.Length;
 
             return null;
         }
