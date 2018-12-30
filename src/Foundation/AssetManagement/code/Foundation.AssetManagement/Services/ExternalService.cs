@@ -85,6 +85,8 @@ namespace Foundation.AssetManagement.Services
             ASCIIEncoding encoding = new ASCIIEncoding();
             byte[] data = encoding.GetBytes(jsonString);
 
+            Stream stream = webRequest.GetRequestStream();
+
             return null;
         }
 
