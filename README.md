@@ -3,13 +3,13 @@ External Asset Management in Sitecore is an open source module guiding you about
 
 ## Integration with AWS-based asset library
 The current module implementation assumes that the external asset library is based on [Amazon Web Services](https://docs.aws.amazon.com/general/latest/gr/Welcome.html) and shows all nuances in that regard. All specific AWS settings are defined in the config file:
-- AssetManagement.Host
+- **AssetManagement.Host** - a hostname 
 - AssetManagement.SearchUrl
-- AssetsManagement.RegionName - AWS region
+- **AssetsManagement.RegionName** - AWS region
 - AssetsManagement.ServiceName
-- AssetsManagement.ContentType - content-type header
+- **AssetsManagement.ContentType** - content-type header
 - AssetsManagement.SignedHeaders
-- AssetsManagement.Algorithm - a signing algorithm to be used to hash the payload
+- **AssetsManagement.Algorithm** - a signing algorithm to be used to hash the payload
 - AssetManagement.AccessKey
 - AssetManagement.SecretKey
 
