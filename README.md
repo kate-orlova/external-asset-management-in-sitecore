@@ -8,7 +8,7 @@ The current module implementation assumes that the external asset library is bas
 - **AssetsManagement.RegionName** - AWS region
 - AssetsManagement.ServiceName
 - **AssetsManagement.ContentType** - content-type header
-- AssetsManagement.SignedHeaders
+- **AssetsManagement.SignedHeaders** - a list of signed headers
 - **AssetsManagement.Algorithm** - a signing algorithm to be used to hash the payload
 - AssetManagement.AccessKey
 - AssetManagement.SecretKey
