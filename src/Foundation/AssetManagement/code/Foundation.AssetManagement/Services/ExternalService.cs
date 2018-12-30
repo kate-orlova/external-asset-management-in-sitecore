@@ -82,6 +82,9 @@ namespace Foundation.AssetManagement.Services
             webRequest.Headers.Add("x-amz-content-sha256", hashedRequestPayload);
             webRequest.ContentLength = jsonString.Length;
 
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] data = encoding.GetBytes(jsonString);
+
             return null;
         }
 
