@@ -11,7 +11,7 @@ The current module implementation assumes that the external asset library is bas
 - **AssetManagement.Host** - a hostname 
 - **AssetManagement.SearchUrl** - a search service link
 - **AssetsManagement.RegionName** - an AWS region
-- AssetsManagement.ServiceName
+- **AssetsManagement.ServiceName** - a name of AWS API Gateway component service for API execution
 - **AssetsManagement.ContentType** - a content-type header
 - **AssetsManagement.SignedHeaders** - a list of signed headers
 - **AssetsManagement.Algorithm** - a signing algorithm to be used to hash the payload
