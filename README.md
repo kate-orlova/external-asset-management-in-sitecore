@@ -8,15 +8,15 @@ Prior to registering the external services in Sitecore one should implement a me
 
 ## Integration with AWS-based asset library
 The current module implementation assumes that the external asset library is based on [Amazon Web Services](https://docs.aws.amazon.com/general/latest/gr/Welcome.html) and shows all nuances in that regard. All specific AWS settings are defined in the config file:
-- **AssetManagement.Host** - a hostname 
-- **AssetManagement.SearchUrl** - a search service link
-- **AssetsManagement.RegionName** - an AWS region
-- **AssetsManagement.ServiceName** - a name of AWS API Gateway component service for API execution
-- **AssetsManagement.ContentType** - a content-type header
-- **AssetsManagement.SignedHeaders** - a list of signed headers
-- **AssetsManagement.Algorithm** - a signing algorithm to be used to hash the payload
-- **AssetManagement.AccessKey** - an access key
-- AssetManagement.SecretKey
+- **AssetManagement.Host** - a hostname; 
+- **AssetManagement.SearchUrl** - a search service link;
+- **AssetsManagement.RegionName** - an AWS region;
+- **AssetsManagement.ServiceName** - a name of AWS API Gateway component service for API execution;
+- **AssetsManagement.ContentType** - a content-type header;
+- **AssetsManagement.SignedHeaders** - a list of signed headers;
+- **AssetsManagement.Algorithm** - a signing algorithm to be used to hash the payload;
+- **AssetManagement.AccessKey** - an access key;
+- **AssetManagement.SecretKey** - a secret key.
 
 If you plan integrating with any other external system then the general approach will remain the same.
 
