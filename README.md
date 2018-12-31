@@ -15,7 +15,7 @@ The current module implementation assumes that the external asset library is bas
 - **AssetsManagement.ContentType** - a content-type header
 - **AssetsManagement.SignedHeaders** - a list of signed headers
 - **AssetsManagement.Algorithm** - a signing algorithm to be used to hash the payload
-- AssetManagement.AccessKey
+- **AssetManagement.AccessKey** - an access key
 - AssetManagement.SecretKey
 
 If you plan integrating with any other external system then the general approach will remain the same.
