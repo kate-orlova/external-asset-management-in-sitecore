@@ -2,9 +2,9 @@
 External Asset Management in Sitecore is an open source module guiding you about how to plug an external asset library into Sitecore.
 
 ## Configuration
-Prior to registering the external services in Sitecore one should implement a mechanism of accessing & processing the external assets. This solution is composed of two classes:
-- ExternalService
-- ExternalImageProcessor
+Prior to registering the external services in Sitecore one should implement a mechanism of accessing & processing the external assets. This solution consists of two classes:
+- **ExternalService** for communication with the external service and searching for images;
+- **ExternalImageProcessor** for resizing and cropping images.
 
 ## Integration with AWS-based asset library
 The current module implementation assumes that the external asset library is based on [Amazon Web Services](https://docs.aws.amazon.com/general/latest/gr/Welcome.html) and shows all nuances in that regard. All specific AWS settings are defined in the config file:
