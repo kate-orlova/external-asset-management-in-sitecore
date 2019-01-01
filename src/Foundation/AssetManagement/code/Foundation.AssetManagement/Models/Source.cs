@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace Foundation.AssetManagement.Models
 {
@@ -12,6 +13,7 @@ namespace Foundation.AssetManagement.Models
         [JsonProperty("metadata")] public Metadata Metadata { get; set; }
         [JsonProperty("public_url")] public string PublicUrl { get; set; }
         [JsonProperty("status")] public string Status { get; set; }
+        [JsonProperty("storage_item_keys")] public IList<string> StorageItemKeys { get; set; }
         [JsonProperty("thumbnail")] public Thumbnail Thumbnail { get; set; }
         [JsonProperty("type")] public string Type { get; set; }
         [JsonProperty("updated")] public DateTime Updated { get; set; }
