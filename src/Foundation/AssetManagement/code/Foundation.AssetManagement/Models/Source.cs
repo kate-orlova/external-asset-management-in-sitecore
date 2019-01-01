@@ -15,6 +15,7 @@ namespace Foundation.AssetManagement.Models
         [JsonProperty("thumbnail")] public Thumbnail Thumbnail { get; set; }
         [JsonProperty("type")] public string Type { get; set; }
         [JsonProperty("updated")] public DateTime Updated { get; set; }
+        [JsonProperty("last_indexed_date")] public DateTime LastIndexedDate { get; set; }
         [JsonProperty("visibility")] public string Visibility { get; set; }
     }
 }
