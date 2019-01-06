@@ -6,6 +6,10 @@ Prior to registering the external services in Sitecore one should implement a me
 - **ExternalService** for communication with the external service and searching for images;
 - **ExternalImageProcessor** for resizing and cropping images.
 
+### ExternalService class
+The ExternalService class implements a search method across the external to Sitecore assets and has the following signature
+```Search(string query, int startFrom, int pageSize)```
+
 ## Integration with AWS-based asset library
 The current module implementation assumes that the external asset library is based on [Amazon Web Services](https://docs.aws.amazon.com/general/latest/gr/Welcome.html) and shows all nuances in that regard. All specific AWS settings are defined in the config file:
 - **AssetManagement.Host** - a hostname; 
