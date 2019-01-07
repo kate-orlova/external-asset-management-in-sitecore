@@ -7,8 +7,14 @@ Prior to registering the external services in Sitecore one should implement a me
 - **ExternalImageProcessor** for resizing and cropping images.
 
 ### ExternalService class
-The ExternalService class implements a search method across the external to Sitecore assets and has the following signature
-```Search(string query, int startFrom, int pageSize)```
+The ExternalService class implements a search method across the external to Sitecore assets and has the following signature:
+```ExternalServiceSearchResponse Search(string query, int startFrom, int pageSize)```
+
+### ExternalImageProcessor class
+The ExternalImageProcessor class implements two methods for image resizing and cropping with the next signatures:
+```string Resize(string url, int width, string additionalParameters)```
+
+```string Crop(string url, int width, int height)```
 
 ## Integration with AWS-based asset library
 The current module implementation assumes that the external asset library is based on [Amazon Web Services](https://docs.aws.amazon.com/general/latest/gr/Welcome.html) and shows all nuances in that regard. All specific AWS settings are defined in the config file:
