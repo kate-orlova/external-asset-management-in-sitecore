@@ -8,10 +8,12 @@ Prior to registering the external services in Sitecore one should implement a me
 
 ### ExternalService class
 The ExternalService class implements a search method across the external to Sitecore assets and has the following signature:
+
 ```ExternalServiceSearchResponse Search(string query, int startFrom, int pageSize)```
 
 ### ExternalImageProcessor class
 The ExternalImageProcessor class implements two methods for image resizing and cropping with the next signatures:
+
 ```string Resize(string url, int width, string additionalParameters)```
 
 ```string Crop(string url, int width, int height)```
