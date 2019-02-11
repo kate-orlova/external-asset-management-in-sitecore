@@ -1,3 +1,7 @@
+[![GitHub release](https://img.shields.io/github/release-date/kate-orlova/external-asset-management-in-sitecore.svg?style=flat)](https://github.com/kate-orlova/external-asset-management-in-sitecore/releases/tag/MVPRelease)
+[![GitHub license](https://img.shields.io/github/license/kate-orlova/external-asset-management-in-sitecore.svg)](https://github.com/kate-orlova/external-asset-management-in-sitecore/blob/master/LICENSE)
+![GitHub top language](https://img.shields.io/github/languages/top/kate-orlova/external-asset-management-in-sitecore.svg?style=flat)
+
 # External asset management in Sitecore
 External Asset Management in Sitecore is an open source module guiding you about how to plug an external asset library into Sitecore, so that you can easily select a desired image in Sitecore Experience Editor.
 
