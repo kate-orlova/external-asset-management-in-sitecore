@@ -1,3 +1,4 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kate-orlova/external-asset-management-in-sitecore)
 [![GitHub release](https://img.shields.io/github/release-date/kate-orlova/external-asset-management-in-sitecore.svg?style=flat)](https://github.com/kate-orlova/external-asset-management-in-sitecore/releases/tag/MVPRelease)
 [![GitHub license](https://img.shields.io/github/license/kate-orlova/external-asset-management-in-sitecore.svg)](https://github.com/kate-orlova/external-asset-management-in-sitecore/blob/master/LICENSE)
 ![GitHub lanmguage count](https://img.shields.io/github/languages/count/kate-orlova/external-asset-management-in-sitecore.svg?style=flat)
